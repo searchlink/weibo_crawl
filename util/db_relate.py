@@ -8,13 +8,14 @@
 import pymysql
 from pymongo import MongoClient
 from sqlalchemy import create_engine
-from web_crawl.weibo_crawl.settings import config
+from settings import config
 
-def write_to_mysql(df, table_name):
-    string = "mysql+pymysql://%s:%s@%s:%s/%s?charset=%s" % (config.DB_USERNAME, config.DB_PASSWORD,
-                                                            config.DB_HOST, config.DB_PORT, config.DB_DATABASE, config.DB_CODING)
-    engine = create_engine(string)
-    df.to_sql(name=table_name, con=engine, if_exists='append', index=False, index_label=False)
+# 这里未用到mysql
+# def write_to_mysql(df, table_name):
+#     string = "mysql+pymysql://%s:%s@%s:%s/%s?charset=%s" % (config.DB_USERNAME, config.DB_PASSWORD,
+#                                                             config.DB_HOST, config.DB_PORT, config.DB_DATABASE, config.DB_CODING)
+#     engine = create_engine(string)
+#     df.to_sql(name=table_name, con=engine, if_exists='append', index=False, index_label=False)
 
 
 class Mongodb(object):
