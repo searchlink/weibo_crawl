@@ -10,7 +10,7 @@ from pymongo import MongoClient
 from sqlalchemy import create_engine
 from settings import config
 
-# 这里未用到mysql
+# 这里未用到mysql，因此注释掉
 # def write_to_mysql(df, table_name):
 #     string = "mysql+pymysql://%s:%s@%s:%s/%s?charset=%s" % (config.DB_USERNAME, config.DB_PASSWORD,
 #                                                             config.DB_HOST, config.DB_PORT, config.DB_DATABASE, config.DB_CODING)
