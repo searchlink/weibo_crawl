@@ -3,12 +3,12 @@
 说明：
 1. settings/config下需要编辑自己的微博账户和密码
 
-2. 执行如下生成cookies
+2. 执行如下生成cookies   
 `python3 weibo_login.py`  
 
 3. 具体内容或者评论爬取，启动方式：   
 `python3 weibo_scrapy.py`   
-注意：
+注意：   
 1). 需要指定爬取的种子scrap_id，可以直接在微博页面找寻
 可以在weibo_scrapy.py中修改只是获取内容还是获取内容和评论
 ```
